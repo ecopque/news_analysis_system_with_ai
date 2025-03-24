@@ -1,4 +1,4 @@
-# FILE: /ai_client.py
+# FILE: /scripts/ai_client.py
 
 # [DeepSeek]:
 import os
