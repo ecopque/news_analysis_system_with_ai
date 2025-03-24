@@ -19,11 +19,19 @@ class NewsCollector:
             soup = BeautifulSoup(response.text, 'html.parser')
             articles = list()
 
-            for i1 in soup.select('article')[:10]:
-                title = i1.find('h2').text.strip() if i1.find('h2') else 'Untitled' # confuso?
-                link = i1.find('a')['href'] if i1.find('a') else '#' # confuso?
-                link = urljoin(url, link)
+            for i1 in soup.find_all('articles'):
+                if len(articles) >= 10:
+                    break
 
+                title = 'Untitled'
+                if i1.find('h2'):
+                    title = i1.find('h2').text.strip()
+
+                link = '#'
+                if i1.find('a'):
+                    link = i1.find('a')['href']
+                    link = urljoin(url, link)
+            
                 articles.append({
                     'title': title,
                     'url': link,
@@ -46,4 +54,6 @@ class NewsCollector:
         } for i2 in feed.entries[:15]]) # confused?
     
     def run(self, sources):
-        
+        all_news = pd.DataFrame()
+        for i3 in sources:
+            df = self.get_rss(i3) if i3.endswith()
