@@ -1,6 +1,6 @@
 # FILE: /config/sources.py
 
-# [News Sources]:
+# [News Sources]: #3:
 NEW_SOURCES = [
     #RSS feed:
     "http://g1.globo.com/dynamo/rss2.xml",

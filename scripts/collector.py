@@ -11,7 +11,7 @@ from urllib.parse import urljoin
 
 class NewsCollector:
     def __init__(self):
-        self.headers = {'User-Agent': 'Mozilla/5.0'}
+        self.headers = {'User-Agent': 'Mozilla/5.0'} #4:
 
     def scrape_site(self, url):
         try:
@@ -71,3 +71,4 @@ class NewsCollector:
             
             all_news = pd.concat([all_news, df])
             time.sleep(2)
+        return all_news.drop_duplicates('url')
