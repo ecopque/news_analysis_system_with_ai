@@ -1,5 +1,9 @@
 # FILE: /dashboard/app.py
 
+import sys
+from pathlib import Path
+sys.path.append(str(Path(__file__).parent.parent))
+
 # [Dashboard with Streamlt]:
 import streamlit as st #32:
 import pandas as pd
