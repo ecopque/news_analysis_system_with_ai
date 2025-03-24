@@ -11,3 +11,11 @@ st.set_page_config(page_title='News Analyzer', layout='wide')
 st.title('News Analyzer with DeepSeek')
 
 # Sidebar for settings:
+st.sidebar.header('Confugurations')
+temperature = st.sidebar.slider(
+    'Temperature (creativity)',
+    min_value=0.0,
+    max_value=1.0,
+    value=0.7,
+    step=0.1
+)
