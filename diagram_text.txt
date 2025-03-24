@@ -1,5 +1,6 @@
 # FILE: /diagram_text.txt
 
+# [Project Structure]:
 news_analyzer/
 ├── .env # Stores the API Key
 ├── config/

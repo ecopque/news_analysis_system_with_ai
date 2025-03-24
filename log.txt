@@ -1,1 +1,4 @@
 # FILE: /log.txt
+
+# [Step by step]:
+#1: $pip install requests beautifulsoup4 feedparser pandas python-dotenv streamlit
