@@ -4,6 +4,7 @@
 import streamlit as st #32:
 import pandas as pd
 from scripts.collector import NewsCollector #33:
+from scripts.ai_client import DeepSeekAI
 from config.sources import NEW_SOURCES
 
 # Page setup:
@@ -36,3 +37,16 @@ if st.button('Search for current news'): #39:
 if 'news_df' in st.session_state: #42:
     st.header('Collected news') #43:
     st.dataframe(st.session_state.news_df) #44:
+
+    st.header('AI Analyzis') #45:
+    if st.button('Analyze with DeepSeek'): #46:
+        if not st.session_state.news_df.empty: #47:
+            deepseek = DeepSeekAI()
+
+        # Select 3 random news items for analysis:
+        sample_news = st.session_state.news_df.sample(3) #48:
+
+        # Prepare the text for analysis:
+        analysis_text = ''
+        for index, row in sample_news.iterrows():
+            analysis_text += f'Title: {row["title"]}\nURL: {row['url']}\n\n'
