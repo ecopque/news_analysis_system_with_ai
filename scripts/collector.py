@@ -1,0 +1,2 @@
+# FILE: /scripts/collector.py
+
