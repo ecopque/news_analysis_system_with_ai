@@ -20,8 +20,8 @@ class NewsCollector:
             articles = list()
 
             for i1 in soup.select('article')[:10]:
-                title = i1.find('h2').text.strip() if i1.find('h2') else 'Untitled'
-                link = i1.find('a')['href'] if i1.find('a') else '#'
+                title = i1.find('h2').text.strip() if i1.find('h2') else 'Untitled' # confuso?
+                link = i1.find('a')['href'] if i1.find('a') else '#' # confuso?
                 link = urljoin(url, link)
 
                 articles.append({
@@ -43,7 +43,7 @@ class NewsCollector:
             'url': i2.link,
             'source': feed_url,
             'date': datetime.now().strftime('%Y-%m-%d')
-        } for i2 in feed.entries[:15]])
+        } for i2 in feed.entries[:15]]) # confused?
     
     def run(self, sources):
         
