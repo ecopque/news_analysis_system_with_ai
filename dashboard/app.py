@@ -33,3 +33,6 @@ if st.button('Search for current news'): #39:
         st.error('No news was collected. Check sources.')
 
 # Analysis section:
+if 'news_df' in st.session_state: #42:
+    st.header('Collected news') #43:
+    st.dataframe(st.session_state.news_df) #44:
