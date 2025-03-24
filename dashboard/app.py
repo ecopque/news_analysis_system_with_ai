@@ -43,13 +43,21 @@ if 'news_df' in st.session_state: #42:
         if not st.session_state.news_df.empty: #47:
             deepseek = DeepSeekAI()
 
-        # Select 3 random news items for analysis:
-        sample_news = st.session_state.news_df.sample(3) #48:
+            # Select 3 random news items for analysis:
+            sample_news = st.session_state.news_df.sample(3) #48:
 
-        # Prepare the text for analysis:
-        analysis_text = ''
-        for index, row in sample_news.iterrows():
-            analysis_text += f'Title: {row["title"]}\nURL: {row['url']}\n\n'
+            # Prepare the text for analysis:
+            analysis_text = ''
+            for index, row in sample_news.iterrows():
+                analysis_text += f'Title: {row["title"]}\nURL: {row['url']}\n\n'
 
-        # Call the DeepSeek API:
-        ...
+            # Call the DeepSeek API:
+            with st.spinner('Analyzing with DeepSeek...'):
+                analysis_result = deepseek.analyze(analysis_text, temperature)
+            
+            st.subheader('Analysis Result')
+            st.write(analysis_result)
+        
+        else:
+            st.warning('No news avaiulable for analysis.')
+
