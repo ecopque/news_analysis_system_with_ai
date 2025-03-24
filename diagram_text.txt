@@ -8,7 +8,7 @@ news_analyzer/
 ├── data/ # News collected (CSV/JSON)
 ├── scripts/
 │ ├── collector.py # News collection (scraping/RSS)
-│ ├── deepseek_client.py # Integration with DeepSeek
+│ ├── ai_client.py # Integration with DeepSeek
 │ ├── analyzer.py # Processing and analysis
 │ └── report.py # Report generation
 ├── dashboard/
