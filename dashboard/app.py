@@ -50,3 +50,6 @@ if 'news_df' in st.session_state: #42:
         analysis_text = ''
         for index, row in sample_news.iterrows():
             analysis_text += f'Title: {row["title"]}\nURL: {row['url']}\n\n'
+
+        # Call the DeepSeek API:
+        ...
