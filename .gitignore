@@ -163,6 +163,7 @@ nginx-https.env
 .mm
 step_by_step.txt
 credit_card_default_model.pkl
+/ai.txt
 
 
 # Edson Copque | https://linktr.ee/edsoncopque
