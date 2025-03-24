@@ -30,3 +30,20 @@ class NewsCollector:
                     'source': url,
                     'date': datetime.now().strftime('%Y-%m-%d')
                 })
+            
+            return pd.DataFrame(articles)
+
+        except Exception as my_error:
+            print(f'Error: Error fetching {url}: {my_error}')
+
+    def get_rss(self, feed_url):
+        feed = feedparser.parse(feed_url)
+        return pd.DataFrame([{
+            'title': i2.title,
+            'url': i2.link,
+            'source': feed_url,
+            'date': datetime.now().strftime('%Y-%m-%d')
+        } for i2 in feed.entries[:15]])
+    
+    def run(self, sources):
+        
