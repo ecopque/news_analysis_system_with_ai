@@ -38,22 +38,36 @@ class NewsCollector:
                     'source': url,
                     'date': datetime.now().strftime('%Y-%m-%d')
                 })
-            
             return pd.DataFrame(articles)
 
         except Exception as my_error:
             print(f'Error: Error fetching {url}: {my_error}')
+            return pd.DataFrame()
 
     def get_rss(self, feed_url):
         feed = feedparser.parse(feed_url)
-        return pd.DataFrame([{
-            'title': i2.title,
-            'url': i2.link,
-            'source': feed_url,
-            'date': datetime.now().strftime('%Y-%m-%d')
-        } for i2 in feed.entries[:15]]) # confused?
-    
+        articles = list()
+
+        for i2 in feed.entries:
+            if len(articles) >= 15:
+                break
+        
+            articles.append({
+                'title': i2.title,
+                'url': i2.link,
+                'source': feed_url,
+                'date': datetime.now().strftime('%Y-%m-%d')
+            })
+        return pd.DataFrame(articles)
+
     def run(self, sources):
         all_news = pd.DataFrame()
+
         for i3 in sources:
-            df = self.get_rss(i3) if i3.endswith()
+            if i3.endswith('.xml'):
+                df = self.get_rss(i3)
+            else:
+                df = self.scrape_site(i3)
+            
+            all_news = pd.concat([all_news, df])
+            time.sleep(2)
