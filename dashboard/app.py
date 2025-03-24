@@ -52,12 +52,12 @@ if 'news_df' in st.session_state: #42:
 
             # Prepare the text for analysis:
             analysis_text = ''
-            for index, row in sample_news.iterrows():
-                analysis_text += f'Title: {row["title"]}\nURL: {row["url"]}\n\n'
+            for index, row in sample_news.iterrows(): #49:
+                analysis_text += f'Title: {row["title"]}\nURL: {row["url"]}\n\n' #50:
 
             # Call the DeepSeek API:
-            with st.spinner('Analyzing with DeepSeek...'):
-                analysis_result = deepseek.analyze(analysis_text, temperature)
+            with st.spinner('Analyzing with DeepSeek...'): #51:
+                analysis_result = deepseek.analyze(analysis_text, temperature) #52:
             
             st.subheader('Analysis Result')
             st.write(analysis_result)
