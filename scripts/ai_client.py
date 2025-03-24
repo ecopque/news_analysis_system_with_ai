@@ -13,7 +13,7 @@ class DeepSeekAI:
         self.base_url = 'https://api.deepseek.com/v1/chat/completions' #24:
 
     def analyze(self, text, temperature=0.7): #25:
-        hreaders = {
+        headers = {
             "Authorization": f"Bearer {self.api_key}", #26:
             "Content-Type": "application/json" #27:
         }
@@ -30,7 +30,7 @@ class DeepSeekAI:
             'max_tokens': 1000 #29:
         }
         try:
-            response = requests.post(self.base_url, headers=hreaders, json=payload) #30:
+            response = requests.post(self.base_url, headers=headers, json=payload) #30:
             response_data = response.json() #30:
             return response_data['choices'][0]['message']['content'] #31:
         

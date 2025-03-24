@@ -19,7 +19,7 @@ class NewsCollector:
             soup = BeautifulSoup(response.text, 'html.parser') #6:
             articles = list()
 
-            for i1 in soup.find_all('articles'): #7:
+            for i1 in soup.find_all('article'): #7:
                 if len(articles) >= 10:
                     break
 

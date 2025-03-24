@@ -5,14 +5,14 @@ import streamlit as st #32:
 import pandas as pd
 from scripts.collector import NewsCollector #33:
 from scripts.ai_client import DeepSeekAI
-from config.sources import NEW_SOURCES
+from config.sources import NEWS_SOURCES
 
 # Page setup:
 st.set_page_config(page_title='News Analyzer', layout='wide') #34:
 st.title('News Analyzer with DeepSeek') #35:
 
 # Sidebar for settings:
-st.sidebar.header('Confugurations') #36:
+st.sidebar.header('Configurations') #36:
 temperature = st.sidebar.slider( #37:
     'Temperature (creativity)',
     min_value=0.0,
@@ -25,7 +25,7 @@ temperature = st.sidebar.slider( #37:
 st.header('News Collect') #38:
 if st.button('Search for current news'): #39:
     collector = NewsCollector() #40:
-    news_df = collector.run(NEW_SOURCES)
+    news_df = collector.run(NEWS_SOURCES)
 
     if not news_df.empty:
         st.session_state.news_df = news_df #41:
@@ -38,7 +38,7 @@ if 'news_df' in st.session_state: #42:
     st.header('Collected news') #43:
     st.dataframe(st.session_state.news_df) #44:
 
-    st.header('AI Analyzis') #45:
+    st.header('AI Analysis') #45:
     if st.button('Analyze with DeepSeek'): #46:
         if not st.session_state.news_df.empty: #47:
             deepseek = DeepSeekAI()
@@ -49,7 +49,7 @@ if 'news_df' in st.session_state: #42:
             # Prepare the text for analysis:
             analysis_text = ''
             for index, row in sample_news.iterrows():
-                analysis_text += f'Title: {row["title"]}\nURL: {row['url']}\n\n'
+                analysis_text += f'Title: {row["title"]}\nURL: {row["url"]}\n\n'
 
             # Call the DeepSeek API:
             with st.spinner('Analyzing with DeepSeek...'):
@@ -59,5 +59,4 @@ if 'news_df' in st.session_state: #42:
             st.write(analysis_result)
         
         else:
-            st.warning('No news avaiulable for analysis.')
-
+            st.warning('No news available for analysis.')

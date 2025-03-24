@@ -1,7 +1,7 @@
 # FILE: /config/sources.py
 
 # [News Sources]: #3:
-NEW_SOURCES = [
+NEWS_SOURCES = [
     #RSS feed:
     "http://g1.globo.com/dynamo/rss2.xml",
     "https://www.bbc.com/portuguese/brasil/index.xml",
