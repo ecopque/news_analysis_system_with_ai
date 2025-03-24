@@ -10,12 +10,12 @@ load_dotenv()
 class DeepSeekAI:
     def __init__(self):
         self.api_key = os.getenv('DEEPSEEK_API_KEY')
-        self.base_url = 'https://api.deepseek.com/v1/chat/completions'
+        self.base_url = 'https://api.deepseek.com/v1/chat/completions' #24:
 
-    def analyze(self, text, temperature=0.7):
+    def analyze(self, text, temperature=0.7): #25:
         hreaders = {
-            "Authorization": f"Bearer {self.api_key}",
-            "Content-Type": "application/json"
+            "Authorization": f"Bearer {self.api_key}", #26:
+            "Content-Type": "application/json" #27:
         }
 
         payload = {
@@ -23,9 +23,16 @@ class DeepSeekAI:
             'messages': [
                 {
                     'role': 'user',
-                    'content': f'Analyze this text: {text}'
+                    'content': f'Analyze this text: {text}' #28:
                 }
             ],
             'temperature': temperature,
-            'max_tokens': 1000
+            'max_tokens': 1000 #29:
         }
+        try:
+            response = requests.post(self.base_url, headers=hreaders, json=payload) #30:
+            response_data = response.json() #30:
+            return response_data['choices'][0]['message']['content'] #31:
+        
+        except Exception as my_error:
+            return f'Error: {my_error}.'
