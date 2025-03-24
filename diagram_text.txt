@@ -1,0 +1,15 @@
+# FILE: /diagram_text.txt
+
+news_analyzer/
+├── .env # Stores the API Key
+├── config/
+│ └── sources.py # List of sites for scraping
+├── data/ # News collected (CSV/JSON)
+├── scripts/
+│ ├── collector.py # News collection (scraping/RSS)
+│ ├── deepseek_client.py # Integration with DeepSeek
+│ ├── analyzer.py # Processing and analysis
+│ └── report.py # Report generation
+├── dashboard/
+│ └── app.py # Dashboard (Streamlit)
+└── README.md
