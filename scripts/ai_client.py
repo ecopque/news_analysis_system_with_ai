@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+
 class DeepSeekAI:
     def __init__(self):
         self.api_key = os.getenv('DEEPSEEK_API_KEY')

@@ -8,5 +8,5 @@ load_dotenv()
 
 deepseek = DeepSeekAI()
 test_text = 'API connection text.'
-result = deepseek.analyze(test_text)
+result = deepseek.analyze(test_text) #53:
 print('Result:', result)

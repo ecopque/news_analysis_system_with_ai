@@ -2,8 +2,10 @@
 
 # [Step by step]:
 #1: $pip install requests beautifulsoup4 feedparser pandas python-dotenv streamlit ;
+#1: $pip install google-generativeai ;
 #2: API Key ;
 #3: Sources ;
 #4:
 #23:
 #31:
+#53: 
