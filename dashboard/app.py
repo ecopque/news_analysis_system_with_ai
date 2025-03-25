@@ -9,7 +9,9 @@ import streamlit as st #32:
 import pandas as pd
 from scripts.collector import NewsCollector #33:
 from scripts.ai_client import DeepSeekAI
+
 from config.sources import NEWS_SOURCES
+from scripts.ai_client import GeminiChat
 
 # [GOOGLE AI]
 
