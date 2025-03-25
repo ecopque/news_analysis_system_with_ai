@@ -14,6 +14,22 @@ from config.sources import NEWS_SOURCES
 from scripts.ai_client import GeminiChat
 
 # [GOOGLE AI]
+# Streamlit config:
+st.title('News Analyzer Chat')
+
+# Sidebar:
+if 'chat' not in st.session_state:
+    st.session_state.chat = GeminiChat()
+
+# News collection:
+if st.button('News Update'):
+    with st.spinner('News collecting...'):
+        collector = NewsCollector()
+        st.session_state.news = collector.run(NEWS_SOURCES).to_json()
+        st.session_state.chat.start_chat(st.session_state.news)
+    st.success('News ready for analysis.')
+
+
 
 
 
