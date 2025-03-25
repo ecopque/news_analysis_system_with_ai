@@ -4,10 +4,36 @@
 import os
 import requests
 from dotenv import load_dotenv
+import google.generativeai as genai
 
 load_dotenv()
 
+# [GOOGLE AI]
+class GeminiChat:
+    def __init__(self):
+        genai.configure(api_key=os.getenv('GEMINI_API_KEY'))
+        self.model = genai.GenerativeModel('gemini-1.5-flash')
+        self.chat = None
+        self.context = '''
+        You are an assistant specializing in news analysis.
 
+        Help users understand the data they collect with:
+        - Concise summaries
+        - Sentiment analysis
+        - Trend identification
+        '''
+
+    def start_chat(self, news_data):
+        self.chat = self.model.start_chat()
+        self.chat.send_message(
+            f'{self.contexto}\n\nDados atuais (formato JSON):\n{news_data}'
+        )
+
+
+        # 54:
+
+
+# [DEEP SEEK]
 class DeepSeekAI:
     def __init__(self):
         self.api_key = os.getenv('DEEPSEEK_API_KEY')
