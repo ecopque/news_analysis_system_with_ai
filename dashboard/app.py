@@ -11,6 +11,11 @@ from scripts.collector import NewsCollector #33:
 from scripts.ai_client import DeepSeekAI
 from config.sources import NEWS_SOURCES
 
+# [GOOGLE AI]
+
+
+
+# [DEEP SEEK]
 # Page setup:
 st.set_page_config(page_title='News Analyzer', layout='wide') #34:
 st.title('News Analyzer with DeepSeek') #35:

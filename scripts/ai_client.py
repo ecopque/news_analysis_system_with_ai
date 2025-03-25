@@ -33,7 +33,7 @@ class GeminiChat:
         if not self.chat:
             return 'Error: Chat not started.'
         
-        response = self.chat.send_message(question)
+        response = self.chat.send_message(question) #56:
         return response.text
 
 
