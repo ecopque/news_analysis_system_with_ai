@@ -29,6 +29,7 @@ if st.button('News Update'):
         st.session_state.chat.start_chat(st.session_state.news)
     st.success('News ready for analysis.')
     # incomplete
+    st.sidebar.header('Configurations')
 
 
 
