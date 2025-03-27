@@ -28,9 +28,10 @@ if st.button('News Update'):
         st.session_state.news = collector.run(NEWS_SOURCES).to_json()
         st.session_state.chat.start_chat(st.session_state.news)
     st.success('News ready for analysis.')
-    # incomplete
-    st.sidebar.header('Configurations')
-
+    
+# Chat:
+if 'news' in st.session_state: ####
+    st.subheader('You ask about news') ####
 
 
 
