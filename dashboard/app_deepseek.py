@@ -11,9 +11,7 @@ from scripts.collector import NewsCollector #33:
 from scripts.ai_client import DeepSeekAI
 
 from config.sources import NEWS_SOURCES
-# from scripts.ai_client import GeminiChat
 
-# [DEEP SEEK]
 # Page setup:
 st.set_page_config(page_title='News Analyzer DeepSeek', layout='wide') #34:
 st.title('News Analyzer with DeepSeek') #35:
@@ -67,29 +65,3 @@ if 'news_df' in st.session_state: #42:
         
         else:
             st.warning('No news available for analysis.')
-
-
-
-
-# # [GOOGLE AI]
-# # Streamlit config:
-# st.title('News Analyzer Chat')
-
-# # Sidebar:
-# if 'chat' not in st.session_state:
-#     st.session_state.chat = GeminiChat()
-
-# # News collection:
-# if st.button('News Update'):
-#     with st.spinner('News collecting...'):
-#         collector = NewsCollector()
-#         st.session_state.news = collector.run(NEWS_SOURCES).to_json()
-#         st.session_state.chat.start_chat(st.session_state.news)
-#     st.success('News ready for analysis.')
-    
-# # Chat:
-# if 'news' in st.session_state:
-#     st.subheader('You ask about news')
-
-
-
