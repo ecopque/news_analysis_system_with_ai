@@ -52,7 +52,7 @@ if 'news' in st.session_state: #65:
         # Get response:
         with st.spinner('Analyzig...'):
             response = st.session_state.chat.ask(ask)
-            st.session_state.messages.append('role': 'assistant', 'content': response)
+            st.session_state.messages.append({'role': 'assistant', 'content': response})
 
         
 
