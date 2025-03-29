@@ -43,23 +43,20 @@ if 'news' in st.session_state: #65:
             st.markdown(i1['content']) #71:
 
     # User input:
-    if ask := st.chat_input('Enter your ask: '):
+    if ask := st.chat_input('Enter your ask: '): #72:
         # Add question to history:
-        st.session_state.messages.append({'role': 'user', 'content': ask})
-        with st.chat_message('user'):
-            st.markdown(ask)
+        st.session_state.messages.append({'role': 'user', 'content': ask}) #73:
+        with st.chat_message('user'): #74:
+            st.markdown(ask) #75:
 
         # Get response:
-        with st.spinner('Analyzig...'):
-            response = st.session_state.chat.ask(ask)
-            st.session_state.messages.append({'role': 'assistant', 'content': response})
-
+        with st.spinner('Analyzig...'): #76:
+            response = st.session_state.chat.ask(ask) #77:
+            st.session_state.messages.append({'role': 'assistant', 'content': response}) #78:
         
-
-
-
-
-
+        # Display response:
+        with st.chat_message('assistant'): #79:
+            st.markdown(response) #80:
 
 
 # [DEEP SEEK]
