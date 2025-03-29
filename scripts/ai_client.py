@@ -26,9 +26,7 @@ class GeminiChat:
 
     def start_chat(self, news_data):
         self.chat = self.model.start_chat() #54:
-        self.chat.send_message(
-            f'{self.contexto}\n\nCurrent data: (format JSON):\n{news_data}'
-        ) #55:
+        self.chat.send_message(f'Data: {news_data}') #55:
 
     def ask (self, question):
         if not self.chat:

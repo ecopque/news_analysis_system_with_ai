@@ -6,6 +6,8 @@ sys.path.append(str(Path(__file__).parent.parent))
 
 # [Dashboard with Streamlt]:
 import streamlit as st #32:
+st.set_page_config(page_title='News Analyzer', layout='wide') #81:
+
 import pandas as pd
 from scripts.collector import NewsCollector #33:
 from scripts.ai_client import DeepSeekAI
@@ -14,12 +16,12 @@ from config.sources import NEWS_SOURCES
 from scripts.ai_client import GeminiChat
 
 # [GOOGLE AI]
-# Streamlit config:
-st.title('News Analyzer Chat')
-
 # Sidebar:
 if 'chat' not in st.session_state: #57:
     st.session_state.chat = GeminiChat() #58:
+
+# Streamlit config:
+st.title('News Analyzer Chat')
 
 # News collection:
 if st.button('News Collection'): #59:
