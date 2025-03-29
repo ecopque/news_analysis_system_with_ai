@@ -31,13 +31,13 @@ if st.button('News Collection'): #59:
         st.session_state.chat.start_chat(st.session_state.news) #63:
     st.success('News ready for analysis.') #64:
     
-# Chat:
+# Chat interface:
 if 'news' in st.session_state: #65:
-    st.subheader('You ask about news') #66:
+    st.subheader('Analyzing Chat') #66:
 
     # Chat history:
     if 'messages' not in st.session_state: #67:
-        st.session_state.messages = list() #68:
+        st.session_state.messages = [] #68:
 
     # Displays previous messages:
     for i1 in st.session_state.messages: #69:
@@ -48,13 +48,17 @@ if 'news' in st.session_state: #65:
     if ask := st.chat_input('Enter your ask: '): #72:
         # Add question to history:
         st.session_state.messages.append({'role': 'user', 'content': ask}) #73:
+        
+        # Display user message
         with st.chat_message('user'): #74:
             st.markdown(ask) #75:
 
-        # Get response:
-        with st.spinner('Analyzig...'): #76:
+        # Get assistant response
+        with st.spinner("Analyzing..."): #76:
             response = st.session_state.chat.ask(ask) #77:
-            st.session_state.messages.append({'role': 'assistant', 'content': response}) #78:
+
+        # Add assistant response to chat history
+        st.session_state.messages.append({"role": "assistant", "content": response}) #78:
         
         # Display response:
         with st.chat_message('assistant'): #79:

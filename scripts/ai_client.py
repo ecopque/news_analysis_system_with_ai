@@ -29,12 +29,12 @@ class GeminiChat:
         self.chat.send_message(f'Data: {news_data}') #55:
 
     def ask (self, question):
-        if not self.chat:
+        if not self.chat: #82:
             return 'Error: Chat not started.'
         
         try:
-            response = self.chat.send_message(question)
-            return response.text
+            response = self.chat.send_message(question) #83:
+            return response.text #84:
         except Exception as error:
             return f'Error: {str(error)}'
         
