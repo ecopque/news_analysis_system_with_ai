@@ -4,39 +4,39 @@
 import os
 import requests
 from dotenv import load_dotenv
-# import google.generativeai as genai
+import google.generativeai as genai
 
 load_dotenv()
 
 #TODO: Incomplete
 
 # [GOOGLE AI]
-# class GeminiChat:
-#     def __init__(self):
-#         genai.configure(api_key=os.getenv('GEMINI_API_KEY'))
-#         self.model = genai.GenerativeModel('gemini-1.5-flash')
-#         self.chat = None
-#         self.context = '''
-#         You are an assistant specializing in news analysis.
+class GeminiChat:
+    def __init__(self):
+        genai.configure(api_key=os.getenv('GEMINI_API_KEY'))
+        self.model = genai.GenerativeModel('gemini-1.5-flash')
+        self.chat = None
+        self.context = '''
+        You are an assistant specializing in news analysis.
 
-#         Help users understand the data they collect with:
-#         - Concise summaries
-#         - Sentiment analysis
-#         - Trend identification
-#         '''
+        Help users understand the data they collect with:
+        - Concise summaries
+        - Sentiment analysis
+        - Trend identification
+        '''
 
-#     def start_chat(self, news_data):
-#         self.chat = self.model.start_chat() #54:
-#         self.chat.send_message(
-#             f'{self.contexto}\n\nCurrent data: (format JSON):\n{news_data}'
-#         ) #55:
+    def start_chat(self, news_data):
+        self.chat = self.model.start_chat() #54:
+        self.chat.send_message(
+            f'{self.contexto}\n\nCurrent data: (format JSON):\n{news_data}'
+        ) #55:
 
-#     def ask (self, question):
-#         if not self.chat:
-#             return 'Error: Chat not started.'
+    def ask (self, question):
+        if not self.chat:
+            return 'Error: Chat not started.'
         
-#         response = self.chat.send_message(question) #56:
-#         return response.text
+        response = self.chat.send_message(question) #56:
+        return response.text
 
 
 # [DEEP SEEK]
