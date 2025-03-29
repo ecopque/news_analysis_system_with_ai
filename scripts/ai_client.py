@@ -8,7 +8,6 @@ import google.generativeai as genai
 
 load_dotenv()
 
-#TODO: Incomplete
 
 # [GOOGLE AI]
 class GeminiChat:
