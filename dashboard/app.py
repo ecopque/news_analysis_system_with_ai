@@ -22,7 +22,7 @@ if 'chat' not in st.session_state:
     st.session_state.chat = GeminiChat()
 
 # News collection:
-if st.button('News Update'):
+if st.button('News Collection'):
     with st.spinner('Collecting news...'):
         collector = NewsCollector()
         st.session_state.news = collector.run(NEWS_SOURCES).to_json()
@@ -30,8 +30,12 @@ if st.button('News Update'):
     st.success('News ready for analysis.')
     
 # Chat:
-if 'news' in st.session_state: ####
-    st.subheader('You ask about news') #### error
+if 'news' in st.session_state:
+    st.subheader('You ask about news')
+
+    # Chat history:
+    if 'messages' not in st.session_state:
+        st.session_state.messages = list()
 
 
 
