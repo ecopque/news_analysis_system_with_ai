@@ -18,29 +18,29 @@ from scripts.ai_client import GeminiChat
 st.title('News Analyzer Chat')
 
 # Sidebar:
-if 'chat' not in st.session_state:
-    st.session_state.chat = GeminiChat()
+if 'chat' not in st.session_state: #57:
+    st.session_state.chat = GeminiChat() #58:
 
 # News collection:
-if st.button('News Collection'):
-    with st.spinner('Collecting news...'):
-        collector = NewsCollector()
-        st.session_state.news = collector.run(NEWS_SOURCES).to_json()
-        st.session_state.chat.start_chat(st.session_state.news)
-    st.success('News ready for analysis.')
+if st.button('News Collection'): #59:
+    with st.spinner('Collecting news...'): #60:
+        collector = NewsCollector() #61:
+        st.session_state.news = collector.run(NEWS_SOURCES).to_json() #62:
+        st.session_state.chat.start_chat(st.session_state.news) #63:
+    st.success('News ready for analysis.') #64:
     
 # Chat:
-if 'news' in st.session_state:
-    st.subheader('You ask about news')
+if 'news' in st.session_state: #65:
+    st.subheader('You ask about news') #66:
 
     # Chat history:
-    if 'messages' not in st.session_state:
-        st.session_state.messages = list()
+    if 'messages' not in st.session_state: #67:
+        st.session_state.messages = list() #68:
 
     # Displays previous messages:
-    for i1 in st.session_state.messages:
-        with st.chat_message(i1['role']):
-            st.markdown(i1['content'])
+    for i1 in st.session_state.messages: #69:
+        with st.chat_message(i1['role']): #70:
+            st.markdown(i1['content']) #71:
 
 
 
