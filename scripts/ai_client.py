@@ -30,11 +30,11 @@ class GeminiChat:
             f'{self.contexto}\n\nCurrent data: (format JSON):\n{news_data}'
         ) #55:
 
-    def ask (self, ask):
+    def ask (self, question):
         if not self.chat:
             return 'Error: Chat not started.'
         
-        response = self.chat.send_message(ask) #56:
+        response = self.chat.send_message(question) #56:
         return response.text
 
 
