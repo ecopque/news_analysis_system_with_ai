@@ -37,6 +37,12 @@ if 'news' in st.session_state:
     if 'messages' not in st.session_state:
         st.session_state.messages = list()
 
+    # Displays previous messages:
+    for i1 in st.session_state.messages:
+        with st.chat_message(i1['role']):
+            st.markdown(i1['content'])
+
+
 
 
 # [DEEP SEEK]
