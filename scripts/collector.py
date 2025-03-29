@@ -11,26 +11,26 @@ from urllib.parse import urljoin
 
 class NewsCollector:
     def __init__(self):
-        self.headers = {'User-Agent': 'Mozilla/5.0'} #4:
+        self.headers = {'User-Agent': 'Mozilla/5.0'}
 
     def scrape_site(self, url):
         try:
-            response = requests.get(url, headers=self.headers, timeout=10) #5:
-            soup = BeautifulSoup(response.text, 'html.parser') #6:
+            response = requests.get(url, headers=self.headers, timeout=10)
+            soup = BeautifulSoup(response.text, 'html.parser')
             articles = list()
 
-            for i1 in soup.find_all('article'): #7:
+            for i1 in soup.find_all('article'):
                 if len(articles) >= 10:
                     break
 
                 title = 'Untitled'
-                if i1.find('h2'): #8:
-                    title = i1.find('h2').text.strip() #9:
+                if i1.find('h2'):
+                    title = i1.find('h2').text.strip()
 
                 link = '#'
-                if i1.find('a'): #10:
-                    link = i1.find('a')['href'] #11:
-                    link = urljoin(url, link) #12:
+                if i1.find('a'):
+                    link = i1.find('a')['href']
+                    link = urljoin(url, link)
             
                 articles.append({
                     'title': title,
@@ -38,17 +38,17 @@ class NewsCollector:
                     'source': url,
                     'date': datetime.now().strftime('%Y-%m-%d')
                 })
-            return pd.DataFrame(articles) #13:
+            return pd.DataFrame(articles)
 
         except Exception as my_error:
             print(f'Error: Error fetching {url}: {my_error}')
-            return pd.DataFrame() #14:
+            return pd.DataFrame()
 
     def get_rss(self, feed_url):
-        feed = feedparser.parse(feed_url) #15:
+        feed = feedparser.parse(feed_url)
         articles = list()
 
-        for i2 in feed.entries: #16:
+        for i2 in feed.entries:
             if len(articles) >= 15:
                 break
         
@@ -58,17 +58,17 @@ class NewsCollector:
                 'source': feed_url,
                 'date': datetime.now().strftime('%Y-%m-%d')
             })
-        return pd.DataFrame(articles) #17:
+        return pd.DataFrame(articles)
 
     def run(self, sources):
-        all_news = pd.DataFrame() #18:
+        all_news = pd.DataFrame()
 
         for i3 in sources:
-            if i3.endswith('.xml'): #19:
-                df = self.get_rss(i3) #20:
+            if i3.endswith('.xml'):
+                df = self.get_rss(i3)
             else:
-                df = self.scrape_site(i3) #21:
+                df = self.scrape_site(i3)
             
-            all_news = pd.concat([all_news, df]) #22:
+            all_news = pd.concat([all_news, df])
             time.sleep(2)
-        return all_news.drop_duplicates('url') #23:
+        return all_news.drop_duplicates('url')
