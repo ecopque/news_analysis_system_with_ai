@@ -23,7 +23,7 @@ if 'chat' not in st.session_state:
 
 # News collection:
 if st.button('News Update'):
-    with st.spinner('News collecting...'):
+    with st.spinner('Collecting news...'):
         collector = NewsCollector()
         st.session_state.news = collector.run(NEWS_SOURCES).to_json()
         st.session_state.chat.start_chat(st.session_state.news)
