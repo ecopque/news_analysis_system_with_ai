@@ -32,10 +32,13 @@ class GeminiChat:
         if not self.chat:
             return 'Error: Chat not started.'
         
-        response = self.chat.send_message(question) #56:
-        return response.text
-
-
+        try:
+            response = self.chat.send_message(question)
+            return response.text
+        except Exception as error:
+            return f'Error: {str(error)}'
+        
+  
 # [DEEP SEEK]
 # class DeepSeekAI:
 #     def __init__(self):
