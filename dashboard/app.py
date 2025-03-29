@@ -42,6 +42,19 @@ if 'news' in st.session_state: #65:
         with st.chat_message(i1['role']): #70:
             st.markdown(i1['content']) #71:
 
+    # User input:
+    if ask := st.chat_input('Enter your ask: '):
+        # Add question to history:
+        st.session_state.messages.append({'role': 'user', 'content': ask})
+        with st.chat_message('user'):
+            st.markdown(ask)
+
+        # Get response:
+        with st.spinner('Analyzig...'):
+            response = ... # Consultar documentação
+
+
+
 
 
 
