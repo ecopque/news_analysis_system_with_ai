@@ -13,10 +13,10 @@ class NewsCollector: #10:
     def __init__(self): #11:
         self.headers = {'User-Agent': 'Mozilla/5.0'} #11:
 
-    def scrape_site(self, url):
+    def scrape_site(self, url): #12:
         try:
-            response = requests.get(url, headers=self.headers, timeout=10)
-            soup = BeautifulSoup(response.text, 'html.parser')
+            response = requests.get(url, headers=self.headers, timeout=10) #13:
+            soup = BeautifulSoup(response.text, 'html.parser') #14:
             articles = list()
 
             for i1 in soup.find_all('article'):
