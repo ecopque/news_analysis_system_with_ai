@@ -34,13 +34,15 @@ class NewsCollector: #10:
                 if i1.find('a'): #17:
                     link = i1.find('a')['href'] #17:
                     link = urljoin(url, link) #17:
-            
+
+                # Storing Extracted Data
                 articles.append({
                     'title': title,
                     'url': link,
                     'source': url,
                     'date': datetime.now().strftime('%Y-%m-%d')
-                })
+                }) #18:
+                
             return pd.DataFrame(articles)
 
         except Exception as my_error:

@@ -48,4 +48,4 @@ full_url = urljoin(url, href)
 # Result: "https://newswebsite.com/news1"
 '''
 
-#18: 
+#18: Stores the extracted data in a dictionary. Adds the dictionary to the articles list.
