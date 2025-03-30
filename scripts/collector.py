@@ -77,15 +77,6 @@ class NewsCollector: #10:
         return all_news.drop_duplicates('url')
     
 '''
-HTML example for "i1":
 
-<html>
-  <body>
-    <article>
-      <h2>Breaking News</h2>
-      <a href="/news1">Read more</a>
-    </article>
-  </body>
-</html>
 
 '''

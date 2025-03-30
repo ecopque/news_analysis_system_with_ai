@@ -20,7 +20,30 @@
 #14: response.text extracts the raw HTML content from the page. Converts the HTML string into a structured object. 'html.parser' is a built-in parser in Python that helps navigate and extract elements easily.
 
 #15: Finds all <article> elements in the HTML. Limits extraction to 10 articles.
+'''
+HTML example for "i1":
+
+<html>
+  <body>
+    <article>
+      <h2>Breaking News</h2>
+      <a href="/news1">Read more</a>
+    </article>
+  </body>
+</html>
+'''
 
 #16: Searches for <h2> inside the <article>. If <h2> exists, extracts its text and removes extra spaces using .strip(). If not found, assigns "Untitled" as the title.
 
 #17: Looks for an <a> (anchor/link tag) inside the <article>. If found, extracts its href (URL). Uses urljoin(url, link) to convert relative URLs into absolute URLs.
+'''
+# Base URL
+url = "https://newswebsite.com"
+
+# Found <a> tag
+href = "/news1"
+
+# urljoin combines them:
+full_url = urljoin(url, href)
+# Result: "https://newswebsite.com/news1"
+'''
