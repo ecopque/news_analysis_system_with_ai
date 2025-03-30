@@ -12,4 +12,5 @@
 #8: time: Adds delays in execution (useful for preventing excessive requests).
 #9: urljoin: Combines relative URLs with base URLs to create absolute links.
 
-#10: 
+#10: Defines the NewsCollector class, responsible for fetching news from websites and RSS feeds.
+#11: Initializes the class with a User-Agent header to mimic a browser and avoid bot detection.

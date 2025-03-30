@@ -9,9 +9,9 @@ from datetime import datetime #7:
 import time #8:
 from urllib.parse import urljoin #9:
 
-class NewsCollector:
-    def __init__(self):
-        self.headers = {'User-Agent': 'Mozilla/5.0'}
+class NewsCollector: #10:
+    def __init__(self): #11:
+        self.headers = {'User-Agent': 'Mozilla/5.0'} #11:
 
     def scrape_site(self, url):
         try:
