@@ -17,8 +17,8 @@ class NewsCollector: #10:
         try:
             response = requests.get(url, headers=self.headers, timeout=10) #13:
             soup = BeautifulSoup(response.text, 'html.parser') #14:
+            
             articles = list()
-
             for i1 in soup.find_all('article'):
                 if len(articles) >= 10:
                     break
