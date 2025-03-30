@@ -47,3 +47,5 @@ href = "/news1"
 full_url = urljoin(url, href)
 # Result: "https://newswebsite.com/news1"
 '''
+
+#18: 
