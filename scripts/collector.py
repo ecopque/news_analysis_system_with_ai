@@ -78,5 +78,5 @@ class NewsCollector: #10:
     
 '''
 
-
+Ok, ok.
 '''
