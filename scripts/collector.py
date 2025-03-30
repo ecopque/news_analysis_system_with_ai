@@ -29,10 +29,11 @@ class NewsCollector: #10:
                 if i1.find('h2'): #16:
                     title = i1.find('h2').text.strip() #16:
 
+                # Extracting URLs
                 link = '#'
-                if i1.find('a'):
-                    link = i1.find('a')['href']
-                    link = urljoin(url, link)
+                if i1.find('a'): #17:
+                    link = i1.find('a')['href'] #17:
+                    link = urljoin(url, link) #17:
             
                 articles.append({
                     'title': title,

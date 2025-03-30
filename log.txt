@@ -22,3 +22,5 @@
 #15: Finds all <article> elements in the HTML. Limits extraction to 10 articles.
 
 #16: Searches for <h2> inside the <article>. If <h2> exists, extracts its text and removes extra spaces using .strip(). If not found, assigns "Untitled" as the title.
+
+#17: Looks for an <a> (anchor/link tag) inside the <article>. If found, extracts its href (URL). Uses urljoin(url, link) to convert relative URLs into absolute URLs.
