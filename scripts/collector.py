@@ -42,19 +42,21 @@ class NewsCollector: #10:
                     'source': url,
                     'date': datetime.now().strftime('%Y-%m-%d')
                 }) #18:
-                
+
             return pd.DataFrame(articles)
 
+        # Handling Errors
         except Exception as my_error:
             print(f'Error: Error fetching {url}: {my_error}')
-            return pd.DataFrame()
+            return pd.DataFrame() #19:
 
-    def get_rss(self, feed_url):
-        feed = feedparser.parse(feed_url)
-        articles = list()
+    def get_rss(self, feed_url): #20:
+        feed = feedparser.parse(feed_url) #21:
+        articles = list() #21:
 
-        for i2 in feed.entries:
-            if len(articles) >= 15:
+        # Extracting Articles
+        for i2 in feed.entries: #22:
+            if len(articles) >= 15: #22:
                 break
         
             articles.append({

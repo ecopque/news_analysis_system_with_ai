@@ -49,3 +49,10 @@ full_url = urljoin(url, href)
 '''
 
 #18: Stores the extracted data in a dictionary. Adds the dictionary to the articles list.
+
+#19: If an error occurs, prints a message and returns an empty DataFrame.
+
+#20: Fetches news articles from an RSS feed.
+#21: Parses the RSS feed using feedparser.parse(). Creates an empty list to store extracted articles.
+
+#22: Iterates through RSS feed entries. Limits extraction to 15 articles.
