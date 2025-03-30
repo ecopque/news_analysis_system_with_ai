@@ -70,19 +70,18 @@ class NewsCollector: #10:
         return pd.DataFrame(articles)
 
     def run(self, sources): #24:
-        all_news = pd.DataFrame()
+        all_news = pd.DataFrame() #25:
 
+        # Processing Each Source
         for i3 in sources:
-            if i3.endswith('.xml'):
-                df = self.get_rss(i3)
+            if i3.endswith('.xml'): #26:
+                df = self.get_rss(i3) #26:
             else:
-                df = self.scrape_site(i3)
+                df = self.scrape_site(i3) #26:
             
-            all_news = pd.concat([all_news, df])
-            time.sleep(2)
-        return all_news.drop_duplicates('url')
-    
-'''
-
-Ok, ok.
-'''
+            # Combining Data
+            all_news = pd.concat([all_news, df]) #27:
+            time.sleep(2) #28:
+        
+        # Removing Duplicates
+        return all_news.drop_duplicates('url') #29:

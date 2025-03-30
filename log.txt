@@ -1,6 +1,7 @@
 # FILE: /log.txt
 
 # [Step by step]:
+
 #1: $pip install requests beautifulsoup4 feedparser pandas python-dotenv streamlit ;
 #2: $pip install google-generativeai ;
 
@@ -53,3 +54,8 @@ full_url = urljoin(url, href)
 #23: Extracts title, URL, source, and date from each entry. Appends the data to the list.
 
 #24: Loops through a list of sources (websites and RSS feeds).
+#25: Creates an empty DataFrame to store all articles.
+#26: Checks if the source is an RSS feed (.xml) or a website. Calls the correct function (get_rss or scrape_site).
+#27: Merges the new articles into the existing DataFrame.
+#28: Waits 2 seconds before fetching the next source.
+#29: Ensures no duplicate articles exist in the final DataFrame.
