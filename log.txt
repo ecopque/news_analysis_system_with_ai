@@ -4,4 +4,12 @@
 #1: $pip install requests beautifulsoup4 feedparser pandas python-dotenv streamlit ;
 #2: $pip install google-generativeai ;
 
-#3: 
+#3: requests: Used to send HTTP requests to websites and retrieve their content.
+#4: BeautifulSoup: Parses HTML content from web pages for data extraction.
+#5: feedparser: Parses RSS feeds to extract news articles.
+#6: pandas: Handles data processing and structuring using DataFrames.
+#7: datetime: Manages date and time formatting.
+#8: time: Adds delays in execution (useful for preventing excessive requests).
+#9: urljoin: Combines relative URLs with base URLs to create absolute links.
+
+#10: 

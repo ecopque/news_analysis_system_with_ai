@@ -1,13 +1,13 @@
 # FILE: /scripts/collector.py
 
 # [News Collector Implementation]:
-import requests
-from bs4 import BeautifulSoup
-import feedparser
-import pandas as pd
-from datetime import datetime
-import time
-from urllib.parse import urljoin
+import requests #3:
+from bs4 import BeautifulSoup #4:
+import feedparser #5:
+import pandas as pd #6:
+from datetime import datetime #7:
+import time #8:
+from urllib.parse import urljoin #9:
 
 class NewsCollector:
     def __init__(self):
