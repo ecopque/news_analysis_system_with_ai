@@ -58,16 +58,18 @@ class NewsCollector: #10:
         for i2 in feed.entries: #22:
             if len(articles) >= 15: #22:
                 break
-        
+            
+            # Storing RSS Data
             articles.append({
                 'title': i2.title,
                 'url': i2.link,
                 'source': feed_url,
                 'date': datetime.now().strftime('%Y-%m-%d')
-            })
+            }) #23:
+
         return pd.DataFrame(articles)
 
-    def run(self, sources):
+    def run(self, sources): #24:
         all_news = pd.DataFrame()
 
         for i3 in sources:

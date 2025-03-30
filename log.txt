@@ -18,7 +18,6 @@
 #12: This method fetches HTML content from a given url, extracts news articles, and returns them as a DataFrame.
 #13: Sends an HTTP GET request to the url. Includes self.headers, making the request appear to be from a browser. Sets a timeout=10, ensuring it waits a maximum of 10 seconds for a response.
 #14: response.text extracts the raw HTML content from the page. Converts the HTML string into a structured object. 'html.parser' is a built-in parser in Python that helps navigate and extract elements easily.
-
 #15: Finds all <article> elements in the HTML. Limits extraction to 10 articles.
 '''
 HTML example for "i1":
@@ -32,9 +31,7 @@ HTML example for "i1":
   </body>
 </html>
 '''
-
 #16: Searches for <h2> inside the <article>. If <h2> exists, extracts its text and removes extra spaces using .strip(). If not found, assigns "Untitled" as the title.
-
 #17: Looks for an <a> (anchor/link tag) inside the <article>. If found, extracts its href (URL). Uses urljoin(url, link) to convert relative URLs into absolute URLs.
 '''
 # Base URL
@@ -47,12 +44,12 @@ href = "/news1"
 full_url = urljoin(url, href)
 # Result: "https://newswebsite.com/news1"
 '''
-
 #18: Stores the extracted data in a dictionary. Adds the dictionary to the articles list.
-
 #19: If an error occurs, prints a message and returns an empty DataFrame.
 
 #20: Fetches news articles from an RSS feed.
 #21: Parses the RSS feed using feedparser.parse(). Creates an empty list to store extracted articles.
-
 #22: Iterates through RSS feed entries. Limits extraction to 15 articles.
+#23: Extracts title, URL, source, and date from each entry. Appends the data to the list.
+
+#24: Loops through a list of sources (websites and RSS feeds).
