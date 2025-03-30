@@ -1,6 +1,5 @@
 # FILE: /scripts/collector.py
 
-# [News Collector Implementation]:
 import requests #3:
 from bs4 import BeautifulSoup #4:
 import feedparser #5:
@@ -9,6 +8,7 @@ from datetime import datetime #7:
 import time #8:
 from urllib.parse import urljoin #9:
 
+# [News Collector Implementation]
 class NewsCollector: #10:
     def __init__(self): #11:
         self.headers = {'User-Agent': 'Mozilla/5.0'} #11:
@@ -18,14 +18,16 @@ class NewsCollector: #10:
             response = requests.get(url, headers=self.headers, timeout=10) #13:
             soup = BeautifulSoup(response.text, 'html.parser') #14:
             
+            # Extracting News Articles
             articles = list()
-            for i1 in soup.find_all('article'):
-                if len(articles) >= 10:
+            for i1 in soup.find_all('article'): #15:
+                if len(articles) >= 10: #15:
                     break
-
+                
+                # Extracting Titles
                 title = 'Untitled'
-                if i1.find('h2'):
-                    title = i1.find('h2').text.strip()
+                if i1.find('h2'): #16:
+                    title = i1.find('h2').text.strip() #16:
 
                 link = '#'
                 if i1.find('a'):

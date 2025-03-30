@@ -18,3 +18,7 @@
 #12: This method fetches HTML content from a given url, extracts news articles, and returns them as a DataFrame.
 #13: Sends an HTTP GET request to the url. Includes self.headers, making the request appear to be from a browser. Sets a timeout=10, ensuring it waits a maximum of 10 seconds for a response.
 #14: response.text extracts the raw HTML content from the page. Converts the HTML string into a structured object. 'html.parser' is a built-in parser in Python that helps navigate and extract elements easily.
+
+#15: Finds all <article> elements in the HTML. Limits extraction to 10 articles.
+
+#16: Searches for <h2> inside the <article>. If <h2> exists, extracts its text and removes extra spaces using .strip(). If not found, assigns "Untitled" as the title.
