@@ -40,15 +40,15 @@ class DeepSeekAI:
             response.raise_for_status() #38:
 
             # Processing the Response
-            response_data = response.json()
+            response_data = response.json() #39:
             print(f'API response: {response_data}')
-            if 'choices' not in response_data:
+
+            if 'choices' not in response_data: #40:
                 return f"API error: Unexpected response - {response_data.get('message', 'No details')}"
-            
-            return response_data['choices'][0]['message']['content']
+            else:
+                return response_data['choices'][0]['message']['content'] #41:
         
         except Exception as my_error:
-            
             return f'Error: {my_error}.'
         
 

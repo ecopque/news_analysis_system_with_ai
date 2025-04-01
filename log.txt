@@ -70,4 +70,6 @@ full_url = urljoin(url, href)
 #37: requests.post(self.base_url, headers=headers, json=payload) → Makes a POST request to the API, sending the data in the request body. The JSON format is ensured by the json=payload parameter.
 #38: response.raise_for_status() → If the response indicates an error (e.g., 400, 500), an exception is raised.
 
-#39: 
+#39: response.json() → Converts the API response into a Python dictionary.
+#40: If 'choices' is not present, returns an error message.
+#41: If everything is correct, returns the AI’s response content.
