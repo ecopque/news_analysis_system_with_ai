@@ -37,10 +37,8 @@ HTML example for "i1":
 '''
 # Base URL
 url = "https://newswebsite.com"
-
 # Found <a> tag
 href = "/news1"
-
 # urljoin combines them:
 full_url = urljoin(url, href)
 # Result: "https://newswebsite.com/news1"
@@ -71,3 +69,5 @@ full_url = urljoin(url, href)
 
 #37: requests.post(self.base_url, headers=headers, json=payload) → Makes a POST request to the API, sending the data in the request body. The JSON format is ensured by the json=payload parameter.
 #38: response.raise_for_status() → If the response indicates an error (e.g., 400, 500), an exception is raised.
+
+#39: 

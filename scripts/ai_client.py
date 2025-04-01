@@ -39,7 +39,7 @@ class DeepSeekAI:
             response = requests.post(self.base_url, headers=headers, json=payload) #37:
             response.raise_for_status() #38:
 
-            # 
+            # Processing the Response
             response_data = response.json()
             print(f'API response: {response_data}')
             if 'choices' not in response_data:
