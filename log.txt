@@ -59,3 +59,10 @@ full_url = urljoin(url, href)
 #27: Merges the new articles into the existing DataFrame.
 #28: Waits 2 seconds before fetching the next source.
 #29: Ensures no duplicate articles exist in the final DataFrame.
+
+#30: Used to make HTTP requests to AI APIs.
+#31: Loads environment variables from a .env file.
+#32: Loads variables defined in the .env file.
+#33: Retrieves the API key from the environment variables. If the key is not set, self.api_key will be None.
+#34: Defines the API endpoint, which is the URL where requests will be sent.
+#35: This part of the code is used to create HTTP headers for an API request. Headers are additional pieces of information sent with an HTTP request. They help define how the request should be processed by the server. "Authorization": f"Bearer {self.api_key}" → Adds the API key in the request header. "Content-Type": "application/json" → Specifies that the request will be in JSON format.

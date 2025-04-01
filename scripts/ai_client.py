@@ -2,23 +2,26 @@
 
 # [DeepSeek]:
 import os
-import requests
-from dotenv import load_dotenv
+import requests #30:
+from dotenv import load_dotenv #31:
 import google.generativeai as genai
 
-load_dotenv()
+# Loading Environment Variables
+load_dotenv() #32:
 
 # [DEEP SEEK]
 class DeepSeekAI:
     def __init__(self):
-        self.api_key = os.getenv('DEEPSEEK_API_KEY')
-        self.base_url = 'https://api.deepseek.com/v1/chat/completions'
+        self.api_key = os.getenv('DEEPSEEK_API_KEY') #33:
+        self.base_url = 'https://api.deepseek.com/v1/chat/completions' #34:
 
     def analyze(self, text, temperature=0.7):
+        
+        # Creating Headers
         headers = {
             "Authorization": f"Bearer {self.api_key}",
             "Content-Type": "application/json"
-        }
+        } #35:
 
         payload = {
             'model': 'deepseek-chat',
