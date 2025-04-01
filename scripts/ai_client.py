@@ -55,9 +55,9 @@ class DeepSeekAI:
 # [GOOGLE AI]
 class GeminiChat:
     def __init__(self):
-        genai.configure(api_key=os.getenv('GEMINI_API_KEY'))
-        self.model = genai.GenerativeModel('gemini-1.5-flash')
-        self.chat = None
+        genai.configure(api_key=os.getenv('GEMINI_API_KEY')) #42:
+        self.model = genai.GenerativeModel('gemini-1.5-flash') #43:
+        self.chat = None #44:
         self.context = '''
         You are an assistant specializing in news analysis.
 
@@ -65,7 +65,7 @@ class GeminiChat:
         - Concise summaries
         - Sentiment analysis
         - Trend identification
-        '''
+        ''' #45:
 
     def start_chat(self, news_data):
         self.chat = self.model.start_chat()

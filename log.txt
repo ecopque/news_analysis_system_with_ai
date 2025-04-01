@@ -73,3 +73,8 @@ full_url = urljoin(url, href)
 #39: response.json() → Converts the API response into a Python dictionary.
 #40: If 'choices' is not present, returns an error message.
 #41: If everything is correct, returns the AI’s response content.
+
+#42: Configures the Google Gemini API with the API key stored in environment variables.
+#43: Defines the Gemini 1.5 Flash model, optimized for fast responses.
+#44: Initially, no chat is active.
+#45: Stores a predefined context that guides how the AI should analyze news data.
