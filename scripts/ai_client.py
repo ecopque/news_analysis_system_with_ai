@@ -34,11 +34,12 @@ class DeepSeekAI:
             'max_tokens': 1000
         } #36:
 
-        # Sending the Request to the API
         try:
+            # Sending the Request to the API
             response = requests.post(self.base_url, headers=headers, json=payload) #37:
             response.raise_for_status() #38:
 
+            # 
             response_data = response.json()
             print(f'API response: {response_data}')
             if 'choices' not in response_data:
