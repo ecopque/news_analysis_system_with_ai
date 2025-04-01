@@ -23,6 +23,7 @@ class DeepSeekAI:
             "Content-Type": "application/json"
         } #35:
 
+        # Creating the Payload (Request Data)
         payload = {
             'model': 'deepseek-chat',
             'messages': [{
@@ -31,7 +32,8 @@ class DeepSeekAI:
                 }],
             'temperature': temperature,
             'max_tokens': 1000
-        }
+        } #36:
+
         try:
             response = requests.post(self.base_url, headers=headers, json=payload)
             response.raise_for_status()
