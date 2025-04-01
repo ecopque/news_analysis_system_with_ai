@@ -41,6 +41,7 @@ class DeepSeekAI:
             return response_data['choices'][0]['message']['content'] #31:
         
         except Exception as my_error:
+            
             return f'Error: {my_error}.'
         
 
@@ -71,5 +72,3 @@ class GeminiChat:
         
         response = self.chat.send_message(question) #56:
         return response.text
-
-
