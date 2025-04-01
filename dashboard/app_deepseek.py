@@ -14,7 +14,7 @@ from config.sources import NEWS_SOURCES
 
 # Page setup:
 st.set_page_config(page_title='News Analyzer DeepSeek', layout='wide') #34:
-st.title('News Analyzer with DeepSeek') #35:
+st.title('News Analyzer with DeepSeek:') #35:
 
 # Sidebar for settings:
 st.sidebar.header('Configurations') #36:

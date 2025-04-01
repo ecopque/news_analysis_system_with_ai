@@ -11,7 +11,7 @@ from scripts.ai_client import GeminiChat
 from config.sources import NEWS_SOURCES
 
 # Streamlit config:
-st.title('News Analyzer Gemini')
+st.title('News Analyzer Gemini:')
 
 # Sidebar:
 if 'chat' not in st.session_state:
