@@ -63,7 +63,31 @@ If you don’t have a requirements.txt file, manually install the dependencies:
 pip install requests beautifulsoup4 feedparser pandas python-dotenv streamlit
 ```
 
+### 4. Set up environment variables
+Create a .env file in the root directory and add your API keys:
+```bash
+DEEPSEEK_API_KEY=your_deepseek_api_key
+GEMINI_API_KEY=your_gemini_api_key
+```
 
+## Usage
+
+### 1. Running the Streamlit App
+Run the Gemini-based Streamlit app:
+```bash
+streamlit run dashboard/app_gemini.py
+```
+Or the DeepSeek-based Streamlit app:
+```bash
+streamlit run dashboard/app_deepseek.py
+```
+
+### 2. Collecting and Analyzing News
+- News Update: Click the "News Update" button to collect the latest news.
+- Analysis: Use the Gemini or DeepSeek AI model to analyze and summarize the news content.
+
+### 3. Downloading the Collected News
+Once the news is collected, you can download the data in JSON format for further processing.
 
 ## Developer Info
 
