@@ -93,7 +93,12 @@ Once the news is collected, you can download the data in JSON format for further
 
 ## Images
 This section provides visual examples of the program in action. You can find screenshots of the dashboard, news collection, and analysis sections.
-- xxx
+![x]()
+![x]()
+![x]()
+![x]()
+![x]()
+![x]()
 
 ## Project Structure Diagram
 For easy reference, here is the current project structure:
@@ -122,7 +127,7 @@ If you have any questions about the code, I have documented the most important l
 
 ## About the Author
 
-    . Developer: **Edson Copque**
+    . Developer: Edson Copque
     . Website: https://linktr.ee/edsoncopque
     . GitHub: https://github.com/ecopque
     . Signal Messenger: ecop.01
