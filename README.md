@@ -11,7 +11,7 @@ This project is designed to collect, analyze, and summarize news articles using 
 - [Images](#images)
 - [Project Structure Diagram](#project-structure-diagram)
 - [Developer Guide](#developer-guide)
-- [About the Author](#developer-info)
+- [About the Author](#about-the-author)
 
 ## Project Overview
 
