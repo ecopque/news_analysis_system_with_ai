@@ -19,4 +19,6 @@ news_analysis_system_with_ai/
 ├── log.txt # Log file for debugging
 └── test_api.py # API testing script
 
+# README.md
+
 # Edson Copque - https://linktr.ee/edsoncopque
