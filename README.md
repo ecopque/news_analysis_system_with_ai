@@ -42,7 +42,7 @@ Clone the project to your local machine:
 ```bash
 git clone https://github.com/yourusername/news_analysis_system_with_ai.git
 cd news_analysis_system_with_ai
-
+```
 
 ### 2. Set up a virtual environment
 Create and activate a virtual environment:
@@ -53,7 +53,15 @@ source venv_news/bin/activate  # Linux/macOS
 venv_news\Scripts\activate  # Windows
 ```
 
-
+### 3. Install dependencies
+Install the required Python packages:
+```bash
+pip install -r requirements.txt
+```
+If you don’t have a requirements.txt file, manually install the dependencies:
+```bash
+pip install requests beautifulsoup4 feedparser pandas python-dotenv streamlit
+```
 
 
 
