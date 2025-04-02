@@ -89,6 +89,27 @@ streamlit run dashboard/app_deepseek.py
 ### 3. Downloading the Collected News
 Once the news is collected, you can download the data in JSON format for further processing.
 
+## Project Structure Diagram
+For easy reference, here is the current project structure:
+```bash
+news_analyzer/
+├── .env # Stores the API Key
+├── .gitignore # Git ignore file
+├── config/
+│ └── sources.py # List of sites for scraping
+├── dashboard/
+│ ├── app_deepseek.py # Streamlit dashboard for DeepSeek AI
+│ ├── app_gemini.py # Streamlit dashboard for Gemini AI
+├── prints/ # Screenshots and images (not included in Git)
+├── scripts/
+│ ├── ai_client.py # Integration with AI services (DeepSeek and Gemini)
+│ ├── collector.py # News collection (scraping/RSS)
+├── venv_news/ # Virtual environment (not included in Git)
+├── diagram_text.txt # Project structure diagram
+├── log.txt # Log file for debugging
+└── test_api.py # API testing script
+```
+
 ## Developer Info
 
     . Developer: Edson Copque
