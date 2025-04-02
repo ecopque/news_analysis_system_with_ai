@@ -5,6 +5,8 @@
 #1: $pip install requests beautifulsoup4 feedparser pandas python-dotenv streamlit ;
 #2: $pip install google-generativeai ;
 
+# run: streamlit run dashboard/app_gemini.py
+
 #3: requests: Used to send HTTP requests to websites and retrieve their content.
 #4: BeautifulSoup: Parses HTML content from web pages for data extraction.
 #5: feedparser: Parses RSS feeds to extract news articles.
