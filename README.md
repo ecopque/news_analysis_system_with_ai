@@ -118,11 +118,11 @@ news_analyzer/
 
 ## Developer Guide
 
-If you have any questions about the code, I have documented the most important lines with explanations on their functionality in the log.txt file. This file provides a step-by-step guide to help understand the code and how the system works.
+If you have any questions about the code, I have documented the most important lines with explanations on their functionality in the **log.txt** file. This file provides a **step-by-step** guide to help understand the code and how the system works.
 
 ## About the Author
 
-    . Developer: Edson Copque
+    . Developer: **Edson Copque**
     . Website: https://linktr.ee/edsoncopque
     . GitHub: https://github.com/ecopque
     . Signal Messenger: ecop.01
