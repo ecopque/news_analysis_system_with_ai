@@ -8,8 +8,10 @@ This project is designed to collect, analyze, and summarize news articles using 
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Images](#images)
 - [Project Structure Diagram](#project-structure-diagram)
-- [Developer Info](#developer-info)
+- [Developer Guide](#developer-guide)
+- [About the Author](#developer-info)
 
 ## Project Overview
 
@@ -89,6 +91,10 @@ streamlit run dashboard/app_deepseek.py
 ### 3. Downloading the Collected News
 Once the news is collected, you can download the data in JSON format for further processing.
 
+## Images
+This section provides visual examples of the program in action. You can find screenshots of the dashboard, news collection, and analysis sections.
+- xxx
+
 ## Project Structure Diagram
 For easy reference, here is the current project structure:
 ```bash
@@ -110,7 +116,11 @@ news_analyzer/
 └── test_api.py # API testing script
 ```
 
-## Developer Info
+## Developer Guide
+
+If you have any questions about the code, I have documented the most important lines with explanations on their functionality in the log.txt file. This file provides a step-by-step guide to help understand the code and how the system works.
+
+## About the Author
 
     . Developer: Edson Copque
     . Website: https://linktr.ee/edsoncopque
