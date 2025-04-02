@@ -78,3 +78,6 @@ full_url = urljoin(url, href)
 #43: Defines the Gemini 1.5 Flash model, optimized for fast responses.
 #44: Initially, no chat is active.
 #45: Stores a predefined context that guides how the AI should analyze news data.
+
+#46: Initiates a new chat session with Gemini AI.
+#47: Sends an initial message to provide the AI with the context and news data.

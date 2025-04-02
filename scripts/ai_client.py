@@ -67,11 +67,11 @@ class GeminiChat:
         - Trend identification
         ''' #45:
 
-    def start_chat(self, news_data):
-        self.chat = self.model.start_chat()
+    def my_start_chat(self, news_data):
+        self.chat = self.model.start_chat() #46:
         self.chat.send_message(
             f'{self.context}\n\nCurrent data: (format JSON):\n{news_data}'
-        )
+        ) #47:
 
     def ask (self, question):
         if not self.chat:
