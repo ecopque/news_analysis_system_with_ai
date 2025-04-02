@@ -51,7 +51,6 @@ class DeepSeekAI:
         except Exception as my_error:
             return f'Error: {my_error}.'
         
-
 # [GOOGLE AI]
 class GeminiChat:
     def __init__(self):
@@ -73,9 +72,10 @@ class GeminiChat:
             f'{self.context}\n\nCurrent data: (format JSON):\n{news_data}'
         ) #47:
 
-    def ask (self, question):
-        if not self.chat:
+    def ask(self, question):
+        if not self.chat: #48:
             return 'Error: Chat not started.'
         
-        response = self.chat.send_message(question)
-        return response.text
+        else:
+            response = self.chat.send_message(question) #49:
+            return response.text

@@ -81,3 +81,6 @@ full_url = urljoin(url, href)
 
 #46: Initiates a new chat session with Gemini AI.
 #47: Sends an initial message to provide the AI with the context and news data.
+
+#48: If no chat is active (self.chat is None), returns an error message.
+#49: Sends the question to Gemini AI and returns the response.
