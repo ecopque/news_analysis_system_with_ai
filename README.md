@@ -9,7 +9,7 @@ This project is designed to collect, analyze, and summarize news articles using 
 - [Installation](#installation)
 - [Usage](#usage)
 - [Project Structure Diagram](#project-structure-diagram)
-- [License](#license)
+- [Developer Info](#developer-info)
 
 ## Project Overview
 
