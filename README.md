@@ -5,7 +5,7 @@ This project is designed to collect, analyze, and summarize news articles using 
 ## Table of Contents
 
 - [Project Overview](#project-overview)
-- [Project Structure](#project-structure)
+- [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Project Structure Diagram](#project-structure-diagram)
@@ -21,24 +21,33 @@ Key features include:
 - **Gemini AI** for summarization, sentiment analysis, and trend identification.
 - A **Streamlit-based dashboard** to display news and AI analysis results.
 
-## Project Structure
+## Technologies Used
 
-Below is the directory structure for the project:
+- **Python**: Primary programming language.  
+- **Streamlit**: Web framework for building the interactive dashboard.  
+- **Requests**: HTTP requests to fetch data from APIs.  
+- **BeautifulSoup4**: Web scraping for parsing HTML content.  
+- **Feedparser**: Parsing RSS feeds for news aggregation.  
+- **Pandas**: Data manipulation and structuring.  
+- **Python-dotenv**: Managing environment variables securely.  
 
-```plaintext
-news_analyzer/
-├── .env # Stores the API Key
-├── .gitignore # Git ignore file
-├── config/
-│ └── sources.py # List of sites for scraping
-├── dashboard/
-│ ├── app_deepseek.py # Streamlit dashboard for DeepSeek AI
-│ ├── app_gemini.py # Streamlit dashboard for Gemini AI
-├── prints/ # Screenshots and images (not included in Git)
-├── scripts/
-│ ├── ai_client.py # Integration with AI services (DeepSeek and Gemini)
-│ ├── collector.py # News collection (scraping/RSS)
-├── venv_news/ # Virtual environment (not included in Git)
-├── diagram_text.txt # Project structure diagram
-├── log.txt # Log file for debugging
-└── test_api.py # API testing script
+## Installation
+
+To set up the project, follow these steps:
+
+### 1. Clone the repository
+Clone the project to your local machine:
+
+```bash
+git clone https://github.com/yourusername/news_analysis_system_with_ai.git
+cd news_analysis_system_with_ai
+```
+
+### 2. Set up a virtual environment
+Create and activate a virtual environment:
+
+```bash
+python3 -m venv venv_news
+source venv_news/bin/activate  # Linux/macOS
+venv_news\Scripts\activate  # Windows
+```
