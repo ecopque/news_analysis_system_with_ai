@@ -93,12 +93,12 @@ Once the news is collected, you can download the data in JSON format for further
 
 ## Images
 This section provides visual examples of the program in action. You can find screenshots of the dashboard, news collection, and analysis sections.
-![x]()
-![x]()
-![x]()
-![x]()
-![x]()
-![x]()
+![x](https://github.com/ecopque/news_analysis_system_with_ai/blob/main/prints/Screenshot%20from%202025-04-02%2015-13-02.png)
+![x](https://github.com/ecopque/news_analysis_system_with_ai/blob/main/prints/Screenshot%20from%202025-04-02%2015-13-19.png)
+![x](https://github.com/ecopque/news_analysis_system_with_ai/blob/main/prints/Screenshot%20from%202025-04-02%2015-14-08.png)
+![x](https://github.com/ecopque/news_analysis_system_with_ai/blob/main/prints/Screenshot%20from%202025-04-02%2015-14-32.png)
+![x](https://github.com/ecopque/news_analysis_system_with_ai/blob/main/prints/Screenshot%20from%202025-04-02%2015-17-25.png)
+![x](https://github.com/ecopque/news_analysis_system_with_ai/blob/main/prints/Screenshot%20from%202025-04-02%2015-18-12.png)
 
 ## Project Structure Diagram
 For easy reference, here is the current project structure:
