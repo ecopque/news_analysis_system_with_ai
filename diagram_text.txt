@@ -1,24 +1,22 @@
 # FILE: /diagram_text.txt
 
 # [Project Structure]:
-
-news_analysis_system_with_ai/
-├── .env # Stores the API Key
-├── .gitignore # Git ignore file
+├── .env  # Stores the API Key
+├── .gitignore  # Git ignore file
 ├── config/
-│ └── sources.py # List of sites for scraping
+│   └── sources.py  # List of sites for scraping
 ├── dashboard/
-│ ├── app_deepseek.py # Streamlit dashboard for DeepSeek AI
-│ ├── app_gemini.py # Streamlit dashboard for Gemini AI
-├── prints/ # Screenshots and images (not included in Git)
+│   ├── app_deepseek.py  # Streamlit dashboard for DeepSeek AI
+│   ├── app_gemini.py  # Streamlit dashboard for Gemini AI
+├── prints/  # Screenshots and images (not included in Git)
 ├── scripts/
-│ ├── ai_client.py # Integration with AI services
-│ ├── collector.py # News collection (scraping/RSS)
-├── venv_news/ # Virtual environment (not included in Git)
-├── diagram_text.txt # Project structure diagram
-├── log.txt # Log file for debugging
-└── test_api.py # API testing script
-
-# README.md
+│   ├── ai_client.py  # Integration with AI services
+│   ├── collector.py  # News collection (scraping/RSS)
+├── venv_news/  # Virtual environment (not included in Git)
+├── diagram_text.txt  # Project structure diagram
+├── log.txt  # Log file for debugging
+├── test_api.py  # API testing script
+├── requirements.txt  # Dependencies file (NEW)
+└── README.md
 
 # Edson Copque - https://linktr.ee/edsoncopque
