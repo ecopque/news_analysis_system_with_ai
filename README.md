@@ -115,21 +115,23 @@ This section provides visual examples of the program in action. You can find scr
 ## Project Structure Diagram
 For easy reference, here is the current project structure:
 ```bash
-news_analyzer/
+news_analyzis_system_with_ai/
 ├── .env # Stores the API Key
 ├── .gitignore # Git ignore file
 ├── config/
-│ └── sources.py # List of sites for scraping
+│   └── sources.py # List of sites for scraping
 ├── dashboard/
-│ ├── app_deepseek.py # Streamlit dashboard for DeepSeek AI
-│ ├── app_gemini.py # Streamlit dashboard for Gemini AI
+│   ├── app_deepseek.py # Streamlit dashboard for DeepSeek AI
+│   ├── app_gemini.py # Streamlit dashboard for Gemini AI
 ├── prints/ # Screenshots and images (not included in Git)
 ├── scripts/
-│ ├── ai_client.py # Integration with AI services (DeepSeek and Gemini)
-│ ├── collector.py # News collection (scraping/RSS)
+│   ├── ai_client.py # Integration with AI services (DeepSeek and Gemini)
+│   ├── collector.py # News collection (scraping/RSS)
 ├── venv_news/ # Virtual environment (not included in Git)
 ├── diagram_text.txt # Project structure diagram
 ├── log.txt # Log file for debugging
+├── requirements.txt # Dependencies file
+├── README.md # Project documentation
 └── test_api.py # API testing script
 ```
 
