@@ -85,3 +85,6 @@ class NewsCollector: #10:
         
         # Removing Duplicates
         return all_news.drop_duplicates('url') #29:
+
+
+# Edson Copque - https://linktr.ee/edsoncopque

@@ -79,3 +79,6 @@ class GeminiChat:
         else:
             response = self.chat.send_message(question) #49:
             return response.text
+
+
+# Edson Copque - https://linktr.ee/edsoncopque

@@ -10,3 +10,6 @@ NEWS_SOURCES = [
     "https://www.uol.com.br/",
     "https://www.tecmundo.com.br/"
 ]
+
+
+# Edson Copque - https://linktr.ee/edsoncopque
